@@ -1,0 +1,66 @@
+{
+  "name": "@glcap/utils",
+  "version": "0.0.1",
+  "description": "Random utilities used in my projects",
+  "author": "Gianluca Marco Caputo <glmcaputo@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/glcap"
+  },
+  "engines": {
+    "node": "~14.15.0"
+  },
+  "scripts": {
+    "prebuild": "yarn clean",
+    "build": "yarn clean && pnpify tsc",
+    "clean": "pnpify rimraf ./dist",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.{ts,js}\" --fix"
+  },
+  "dependenciesMeta": {
+    "@tsconfig/node14@1.0.0": {
+      "unplugged": true
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@tsconfig/node14": "^1.0.0",
+    "@types/node": "^14.14.16",
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
+    "@yarnpkg/pnpify": "^2.4.0",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-config-standard-with-typescript": "^19.0.1",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0",
+    "rimraf": "^3.0.2",
+    "tslib": "^2.0.3",
+    "typescript": "^4.1.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format && lint-staged",
+      "pre-push": "tsc --noEmit"
+    }
+  },
+  "lint-staged": {
+    "./*.ts": [
+      "eslint --fix"
+    ]
+  }
+}
