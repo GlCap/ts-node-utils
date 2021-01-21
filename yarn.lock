@@ -238,9 +238,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@glcap/utils@workspace:.":
+"@glcap/ts-node-utils@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@glcap/utils@workspace:."
+  resolution: "@glcap/ts-node-utils@workspace:."
   dependencies:
     "@commitlint/cli": ^11.0.0
     "@commitlint/config-conventional": ^11.0.0
