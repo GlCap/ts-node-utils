@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.1.0](https://github.com/GlCap/utils/compare/v0.0.2...v0.1.0) (2021-01-21)
+
+
+### Bug Fixes
+
+* adjusted package registry owner ([2094493](https://github.com/GlCap/utils/commit/209449369fb995d5da128b8c6ebb72c32ff7fcb6))
+
 ### [0.0.2](https://github.com/GlCap/utils/compare/v0.0.1...v0.0.2) (2020-12-29)
 
 
